@@ -14,13 +14,3 @@ states:
                   action: next
     next_state:
         component: joke_component
-    text_buttons_state:
-        component: meya.text_buttons
-        properties:
-            text: One more bad joke?
-            output: button_click
-            buttons:
-                - text: Oh go on
-                  action: next2
-    next2_state:
-        component: joke_component
