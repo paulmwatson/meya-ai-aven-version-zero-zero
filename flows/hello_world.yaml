@@ -3,7 +3,7 @@ states:
     first:
         component: meya.text
         properties:
-            text: Hello, {{user.first_name}} from {{user._integrations.twitter.location}}. You have {{user._integrations.twitter.followers_count}} followers and have Tweeted {{user._integrations.twitter.statuses_count}} times.
+            text: "Hello, {{user.first_name}} from {{user._integrations.twitter.location}}. You have {{user._integrations.twitter.followers_count}} followers and have Tweeted {{user._integrations.twitter.statuses_count}} times."
     text_suggestions_state:
         component: meya.text_suggestions
         properties:
@@ -14,10 +14,6 @@ states:
                 - "\U0001F3C8 NFL"
                 - "\U000026BD EPL"
                 - "\U000026BE MLB"
-    image_card_state:
-        component: meya.image
-        properties:
-            image_url: 'https://media.giphy.com/media/LQcrSEpmc7GOQ/giphy.gif'
     image_suggestions_state:
         component: meya.image_suggestions
         properties:
@@ -25,6 +21,10 @@ states:
             suggestions:
                 - "\U0001F436 Dogs are the best"
                 - "\U0001F408 Cats are the worst"
+    image_card_state:
+        component: meya.image
+        properties:
+            image_url: "https://media.giphy.com/media/LQcrSEpmc7GOQ/giphy.gif"
     card_state:
         component: meya.card
         properties:
