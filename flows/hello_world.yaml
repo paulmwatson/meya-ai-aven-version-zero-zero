@@ -3,7 +3,7 @@ states:
     first:
         component: meya.text
         properties:
-            text: Hello, {{user.first_name}}
+            text: Hello, {{user.first_name}}. You have {{user._integrations.twitter.followers_count}} followers.
     text_buttons_state:
         component: meya.text_buttons
         properties:
