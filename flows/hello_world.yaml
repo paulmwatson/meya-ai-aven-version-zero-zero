@@ -14,6 +14,17 @@ states:
                 - "\U0001F3C8 NFL"
                 - "\U000026BD EPL"
                 - "\U000026BE MLB"
+    image_card_state:
+        component: meya.image
+        properties:
+            image_url: 'https://media.giphy.com/media/LQcrSEpmc7GOQ/giphy.gif'
+    image_suggestions_state:
+        component: meya.image_suggestions
+        properties:
+            image_url: "http://stories.barkpost.com/wp-content/uploads/2015/04/cat_vs_dog_gif1.gif"
+            suggestions:
+                - "\U0001F436 Dogs are the best"
+                - "\U0001F408 Cats are the worst"
     card_state:
         component: meya.card
         properties:
@@ -26,17 +37,6 @@ states:
                   action: button_action
                 - text: Reject this story
                   action: button_action
-    image_card_state:
-        component: meya.image
-        properties:
-            image_url: 'https://media.giphy.com/media/LQcrSEpmc7GOQ/giphy.gif'
-    image_suggestions_state:
-        component: meya.image_suggestions
-        properties:
-            image_url: "http://stories.barkpost.com/wp-content/uploads/2015/04/cat_vs_dog_gif1.gif"
-            suggestions:
-                - "\U0001F436 Dogs are the best"
-                - "\U0001F408 Cats are the worst"
     text_buttons_state:
         component: meya.text_buttons
         properties:
