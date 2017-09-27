@@ -14,57 +14,29 @@ states:
                 - "\U0001F3C8 NFL"
                 - "\U000026BD EPL"
                 - "\U000026BE MLB"
-        transitions:
-            suggestion_1: suggestion_1_state
-            suggestion_2: suggestion_2_state
-            suggestion_3: suggestion_3_state
-            suggestion_4: suggestion_4_state
-            suggestion_5: suggestion_5_state
-    suggestion_1_state:
-        component: meya.text
+    card_state:
+        component: meya.card
         properties:
-            text: Suggestion 1
-        return: true
-    suggestion_2_state:
-        component: meya.text
-        properties:
-            text: Suggestion 2
-        return: true
-    suggestion_3_state:
-        component: meya.text
-        properties:
-            text: Suggestion 3
-        return: true
-    suggestion_4_state:
-        component: meya.text
-        properties:
-            text: Suggestion 4
-        return: true
-    suggestion_5_state:
-        component: meya.text
-        properties:
-            text: Suggestion 5
-        return: true
-    sports_state:
-        component: meya.text_buttons
-        properties:
-            text: Which leagues would you like to see the scores for?
+            title: Your top story this morning
+            text: "Can’t fit your Tweet into 140 characters? \U0001F914 We’re trying something new with a small group, and increasing the character limit to 280! Excited about the possibilities? Read our blog to find out how it all adds up. \U0000261D"
+            image_url: "https://pbs.twimg.com/ad_img/912753095699980288/2Ob9fAwl?format=jpg&name=orig"
             output: button_click
             buttons:
-                - text: "\U0001F3C0 NBA"
-                  action: next_nba
-                - text: "\U000026BD LIGA"
-                  action: next_nba
-                - text: "\U0001F3C8 NFL"
-                  action: next_nba
-                - text: "\U000026BD EPL"
-                  action: next_nba
-                - text: "\U000026BE MLB"
-                  action: next_nba
-    next_nba_state:
-        component: meya.text
+                - text: Read this story
+                  action: button_action
+                - text: Reject this story
+                  action: button_action
+    image_card_state:
+        component: meya.image
         properties:
-            text: You clicked {{ flow.button_click }}
+            image_url: 'https://media.giphy.com/media/LQcrSEpmc7GOQ/giphy.gif'
+    image_suggestions_state:
+        component: meya.image_suggestions
+        properties:
+            image_url: "http://stories.barkpost.com/wp-content/uploads/2015/04/cat_vs_dog_gif1.gif"
+            suggestions:
+                - "\U0001F436 Dogs are the best"
+                - "\U0001F408 Cats are the worst"
     text_buttons_state:
         component: meya.text_buttons
         properties:
