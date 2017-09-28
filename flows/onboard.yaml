@@ -1,0 +1,30 @@
+name: onboard
+states:
+    hi:
+        component: meya.text
+        properties:
+            text: "Hi there {{ user.first_name }}! I'm your daily news bot! 📰🤖"
+        delay:
+            relative: 2
+    ask:
+        component: meya.text_suggestions
+        properties:
+            text: |
+                Each day, I'll send you some news from our website.
+                Use the buttons below to sign up. Sound good?
+            suggestions:
+                - "Yes, sign me up!"
+                - "No, thanks"
+        transitions:
+            "Yes, sign me up!": subscribe
+            "No, thanks": done
+    subscribe:
+        flow: subscribe
+        return: true
+    done:
+        component: meya.text
+        properties:
+            text: |
+                No problem. You can change your mind at any time, by typing
+                "subscribe"
+        return: true

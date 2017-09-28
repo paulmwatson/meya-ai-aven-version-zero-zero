@@ -1,0 +1,15 @@
+name: subscribe
+states:
+    subscribe:
+        component: meya.set
+        properties:
+            key: subscribed
+            value: "1"
+            scope: user
+    success:
+        component: meya.text
+        properties:
+            text: |
+                🙌 Awesome! Looking forward to the next update.
+                You can unsubscribe at any time by typing "unsubscribe" or "cancel"
+        return: true

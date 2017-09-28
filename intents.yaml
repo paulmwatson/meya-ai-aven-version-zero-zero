@@ -1,2 +1,27 @@
--   flow: hello_world
-    intent: meya.start_chat
+-   flow: daily
+    intent: meya.keyword
+    settings:
+        keyword: __daily__
+-   flow: dontunderstand
+    intent: meya.catchall
+-   flow: onboard
+    intent: meya.keyword
+    settings:
+        keyword: _onboard
+-   flow: reset
+    intent: meya.keyword
+    settings:
+        keyword: resetJKFD451
+-   flow: subscribe
+    intent: meya.keyword
+    settings:
+        keyword: subscribe
+-   flow: test
+    intent: meya.keyword
+    settings:
+        keyword: test
+-   flow: unsubscribe
+    intent: meya.regex
+    settings:
+        ignorecase: true
+        pattern: ^(unsubscribe)|(cancel)$

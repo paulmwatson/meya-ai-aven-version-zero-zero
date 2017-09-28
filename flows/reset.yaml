@@ -1,0 +1,4 @@
+name: reset
+states:
+    flush:
+        component: flushnews

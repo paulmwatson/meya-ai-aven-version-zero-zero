@@ -1,0 +1,6 @@
+name: test
+states:
+    first:
+        component: meya.text
+        properties:
+            text: "Subscribed: {{ user.subscribed }}"

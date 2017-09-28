@@ -1,0 +1,14 @@
+name: unsubscribe
+states:
+    unsubscribe:
+        component: meya.unset
+        properties:
+            key: subscribed
+            scope: user
+    success:
+        component: meya.text
+        properties:
+            text: |
+                Sad to you see you go. 😢
+                If you miss me, you can resubscribe by typing "subscribe" any time.
+        return: true

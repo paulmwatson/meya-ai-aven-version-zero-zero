@@ -1,0 +1,6 @@
+name: daily
+states:
+    getnews:
+        component: getnews
+        properties:
+            url: "http://syndication.purch.com/feeds/en_US_feed_1ffc5275.rss"
