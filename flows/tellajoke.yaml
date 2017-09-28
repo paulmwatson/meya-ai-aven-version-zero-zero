@@ -7,13 +7,13 @@ states:
             output: button_click
             buttons:
                 - text: Yes, please
-                  action: next
+                  action: tell_joke
                 - text: No, thanks
-                  action: no
-    next_state:
+                  action: no_joke
+    tell_joke_state:
         component: joke
         return: true
-    no_state:
+    no_joke_state:
         component: meya.text
         properties:
           text: "No worries, it was a bad joke anyway."
