@@ -3,7 +3,7 @@ states:
     hi:
         component: meya.text
         properties:
-            text: "Hi there {{ user.first_name }}! I'm your daily news bot! 📰🤖"
+            text: "Hi there {{ user.first_name }} from {{user._integrations.twitter.location}}. You have {{user._integrations.twitter.followers_count}} followers and have Tweeted {{user._integrations.twitter.statuses_count}} times. I'm your daily news bot 📰🤖"
         delay:
             relative: 2
     ask:

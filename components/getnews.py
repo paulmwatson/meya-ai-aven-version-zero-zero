@@ -83,13 +83,13 @@ class PollContent(Component):
             except:
                 # don't get hung up on errors
                 continue
-    
+
             # dedupe based on the content_id
             content = self.db.table('content').filter(content_id=content_id)[:1]
             if content:
                 # don't add duplicate content
                 return
-    
+
             # add any new stories
             ts = arrow.utcnow().timestamp
             content = {
