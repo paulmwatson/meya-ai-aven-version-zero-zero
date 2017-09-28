@@ -16,6 +16,10 @@
     intent: meya.keyword
     settings:
         keyword: subscribe
+-   flow: tellajoke
+    intent: meya.keyword
+    settings:
+        keyword: joke
 -   flow: test
     intent: meya.keyword
     settings:
@@ -25,7 +29,3 @@
     settings:
         ignorecase: true
         pattern: ^(unsubscribe)|(cancel)$
--   flow: tellajoke
-    intent: meya.keyword
-    settings:
-        keyword: joke

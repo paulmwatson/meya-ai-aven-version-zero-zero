@@ -1,19 +1,20 @@
 name: tellajoke
 states:
-    text_buttons_state:
-        component: meya.text_buttons
+    ask:
+        component: meya.text_suggestions
         properties:
             text: Do you want a joke?
             output: button_click
-            buttons:
-                - text: Yes, please
-                  action: tell_joke
-                - text: No, thanks
-                  action: no_joke
-    tell_joke_state:
+            suggestions:
+                - "Yes, please"
+                - "No, thanks"
+        transitions:
+            "Yes, please": tell_joke
+            "No, thanks": no_joke
+    tell_joke:
         component: joke
         return: true
-    no_joke_state:
+    no_joke:
         component: meya.text
         properties:
           text: "No worries, it was a bad joke anyway."
