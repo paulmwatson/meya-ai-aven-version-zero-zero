@@ -4,6 +4,10 @@ states:
         component: meya.text
         properties:
             text: "Hello, {{user.first_name}} from {{user._integrations.twitter.location}}. You have {{user._integrations.twitter.followers_count}} followers and have Tweeted {{user._integrations.twitter.statuses_count}} times."
+    image_card_state:
+        component: meya.image
+        properties:
+            image_url: "https://www.nasa.gov/centers/goddard/images/content/638831main_globe_east_2048.jpg"
     text_suggestions_state:
         component: meya.text_suggestions
         properties:
@@ -17,20 +21,16 @@ states:
     image_suggestions_state:
         component: meya.image_suggestions
         properties:
-            image_url: "http://stories.barkpost.com/wp-content/uploads/2015/04/cat_vs_dog_gif1.gif"
+            image_url: "http://lightswitchtimer.co.uk/wp-content/uploads/2013/12/lights-for-pets.jpg"
             suggestions:
                 - "\U0001F436 Dogs are the best"
                 - "\U0001F408 Cats are the worst"
-    image_card_state:
-        component: meya.image
-        properties:
-            image_url: "https://media.giphy.com/media/LQcrSEpmc7GOQ/giphy.gif"
     card_state:
         component: meya.card
         properties:
             title: Your top story this morning
             text: "Can’t fit your Tweet into 140 characters? \U0001F914 We’re trying something new with a small group, and increasing the character limit to 280! Excited about the possibilities? Read our blog to find out how it all adds up. \U0000261D"
-            image_url: "https://pbs.twimg.com/ad_img/912753095699980288/2Ob9fAwl?format=jpg&name=orig"
+            image_url: "https://blog.twitter.com/content/dam/blog-twitter/official/en_us/products/2017/giving-you-more-characters-to-express-yourself/more-chars-1.png.img.fullhd.medium.png"
             output: button_click
             buttons:
                 - text: Read this story
